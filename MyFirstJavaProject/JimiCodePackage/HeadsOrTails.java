@@ -16,7 +16,7 @@ public class HeadsOrTails {
         Scanner in = new Scanner(System.in);
         System.out.println("Enter Head for 1 and Tail for 0");
  
-      String headsOfTailsGuess = in.nextLine();
+        String headsOfTailsGuess = in.nextLine();
         if (headsOfTailsGuess.equals("Head")) {
         	num = 1;
         }
@@ -25,7 +25,7 @@ public class HeadsOrTails {
         }
                
         Scanner scan = new Scanner(System.in);
-        System.out.print("Enter any number: ");
+        System.out.print("Enter the number of times you want the computer to generate a coin flip: ");
         int numberOfFlips = scan.nextInt();
         
         Random random = new Random();
@@ -34,14 +34,14 @@ public class HeadsOrTails {
         	
             coin_flip = random.nextInt(2);
         	if (coin_flip == num) {
-        		correctCount++;	
-        		
+        		correctCount++;		
         	}
-        }
         
-        System.out.println(correctCount);
+        }
+    	System.out.println(correctCount);
         double pct = (correctCount*100)/numberOfFlips;
         System.out.println(df.format(pct));
+        
         
 	}
 
